@@ -65,9 +65,9 @@ public class StepDefinition {
 		}
 		
 		@Then("user provides user details and payment option")
-		public void user_provides_user_details_and_payment_option() {
+		public void user_provides_user_details_and_payment_option() throws InterruptedException {
 		CheckOutPage  checkOutPage=new CheckOutPage(driver);
-		checkOutPage.userDetails("Jancy","Johnson","123456789","jj@gmail.com");
+		checkOutPage.userDetails("jj@gmail.com","xxx");
 		}
 
 

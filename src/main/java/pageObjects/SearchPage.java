@@ -25,13 +25,21 @@ public class SearchPage extends AbstractComponents{
 	@FindBy(xpath="//input[@class='input-text']")
 	WebElement userSearchText;
 	
+	@FindBy(css="div[class='dy-lb-close']")
+	WebElement popup;
+	
+	By popUpBy=By.cssSelector("div[class='dy-lb-close']");
+	
 	@FindBy(xpath="//li[@id='K1000_1']")
 	WebElement secondAutoSuggesstiveOption;
 	
-	public void SearchFunc(String userText) {
+	public void SearchFunc(String userText) throws InterruptedException {
 		Actions a=new Actions(driver);
 		a.sendKeys(userSearchText, userText).build().perform();
+		Thread.sleep(2000);
 		secondAutoSuggesstiveOption.click();
+		waitUntilElementIsVisible(popUpBy);
+		popup.click();
 		
 		
 	}

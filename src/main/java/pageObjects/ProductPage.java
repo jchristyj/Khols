@@ -26,6 +26,10 @@ public class ProductPage extends AbstractComponents{
 	
 	By secondProductDisplayedBy =By.cssSelector("p[rel*='prd-5570619']");
 	
+	public void popup() {
+		
+	}
+	
 	public void product() {
 		waitUntilElementIsVisible(secondProductDisplayedBy);
 		secondProductDisplayed.click();

@@ -32,7 +32,7 @@ public class MyCartPage extends AbstractComponents{
 		public void proceedToCheckOut() {
 		
 			proceedToCheckOutButton.click();
-			if(frameWindow!=null) {
+		/*	if(frameWindow!=null) {
 					driver.switchTo().frame(frameWindow);
 					surveyPopUpExit.click();
 					driver.switchTo().defaultContent();
@@ -45,6 +45,6 @@ public class MyCartPage extends AbstractComponents{
 			else {
 				System.out.println("no popup present");
 			}
-			
+			*/
 	}
 }

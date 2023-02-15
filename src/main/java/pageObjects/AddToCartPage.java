@@ -33,7 +33,7 @@ public class AddToCartPage extends AbstractComponents{
 	
 	public void addTocart() {
 		
-		waitUntilElementIsVisible(addToCartButtonBy);
+		waitUntilElementIsClickable(addToCartButtonBy);
 		addToCartButton.click();
 		waitUntilElementIsVisible(proceedToCartPopUpBy);
 		proceedToCartPopUp.click();

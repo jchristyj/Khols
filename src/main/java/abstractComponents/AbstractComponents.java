@@ -18,7 +18,7 @@ public class AbstractComponents {
 	}
 
 	public void waitPeriod() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 	}
 	public void scrollPageDown() {
@@ -32,6 +32,13 @@ public class AbstractComponents {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FindBy));
 	}
+	
+public void waitUntilElementIsClickable(By FindBy) {
+		
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(FindBy));
+	}
+
 
 
 }
